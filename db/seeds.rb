@@ -5,6 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-adventure = Adventure.create(name: 'Beach', image_url: 'https://media.giphy.com/media/cOtUqslGPQm1TFZa8q/giphy.gif')
+adventures = Adventure.create([
+    {
+        name: 'Beach',
+        image_url: 'https://media.giphy.com/media/cOtUqslGPQm1TFZa8q/giphy.gif'  
+    },
+    {
+        name: 'Transportation',
+        image_url: 'https://media.giphy.com/media/1SsxjunqSGjvJr4sGK/giphy.gif'  
+    },
+    {
+        name: 'Historical Site',
+        image_url: 'https://images.app.goo.gl/PiqNjqjizuxdgj8s7'
+    },
+    {
+        name: 'Food',
+        image_url: 'https://media.giphy.com/media/rgITCeaFoD4OI/giphy.gif'
+    }
+])
 
-event = Event.create(title: 'Number 2 Beach', description: 'Most people do not think beaches when it comes to Africa. If I did not know better , you would think I was on a tropical island.', krio: 'Bo duya = Exucse me', adventure_id: 1)
+
+events = Event.create([
+    {
+        title: 'Number 2 Beach',
+        description: 'Most people do not think beaches when it comes to Africa. If I did not know better , you would think I was on a tropical island',
+        krio: 'Bo duya = Excuse me',
+        adventure: adventures.first
+    }
+])

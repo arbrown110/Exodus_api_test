@@ -1,5 +1,5 @@
-class AdventuresController < ApplicationController
-  before_action :set_adventure, only: [:show, :update, :destroy]
+class Api::V1::AdventuresController < ApplicationController
+     before_action :set_adventure, only: [:show, :update, :destroy]
 
   # GET /adventures
   def index
@@ -49,3 +49,5 @@ class AdventuresController < ApplicationController
       params.require(:adventure).permit(:name, :image_url)
     end
 end
+
+

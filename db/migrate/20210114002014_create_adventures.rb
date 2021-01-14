@@ -3,6 +3,7 @@ class CreateAdventures < ActiveRecord::Migration[6.0]
     create_table :adventures do |t|
       t.string :name
       t.string :image_url
+      t.string :slug
 
       t.timestamps
     end

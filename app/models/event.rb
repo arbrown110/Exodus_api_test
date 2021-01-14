@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-    belongs_to :adventure
+  belongs_to :adventure
 end

@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.text :krio
-      t.integer :adventure_id
+      t.belongs_to :adventure, null: false, foreign_key: true
 
       t.timestamps
     end

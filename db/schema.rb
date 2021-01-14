@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_012451) do
+ActiveRecord::Schema.define(version: 2021_01_14_002131) do
 
   create_table "adventures", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
+    t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,9 +24,11 @@ ActiveRecord::Schema.define(version: 2021_01_13_012451) do
     t.string "title"
     t.text "description"
     t.text "krio"
-    t.integer "adventure_id"
+    t.integer "adventure_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["adventure_id"], name: "index_events_on_adventure_id"
   end
 
+  add_foreign_key "events", "adventures"
 end

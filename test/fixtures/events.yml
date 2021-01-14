@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  decription: MyText
+  description: MyText
   krio: MyText
-  adventure_id: 1
+  adventure: one
 
 two:
   title: MyString
-  decription: MyText
+  description: MyText
   krio: MyText
-  adventure_id: 1
+  adventure: two
